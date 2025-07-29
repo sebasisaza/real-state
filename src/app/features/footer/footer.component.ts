@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class FooterComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log('Home component initialized');
+    console.log('Footer component initialized');
   }
 
-}
+} 
