@@ -1,1 +1,37 @@
-<span>Home</span>
+<div class="home-container">
+  <div class="hero-section">
+    <h1>Discover Your Dream Home</h1>
+    <p>Explore our curated selection of premium properties</p>
+  </div>
+
+  <div class="properties-grid">
+    <div class="property-card" *ngFor="let property of properties">
+      <div class="card-image">
+        <img [src]="property.image" [alt]="property.title" loading="lazy">
+        <div class="price-badge">
+          {{ formatPrice(property.price) }}
+        </div>
+      </div>
+      
+      <div class="card-content">
+        <h3 class="property-title">{{ property.title }}</h3>
+        <p class="property-description">{{ property.description }}</p>
+        
+        <div class="property-details">
+          <div class="detail-item">
+            <span class="detail-icon">🛏️</span>
+            <span class="detail-text">{{ property.bedrooms }} Bedrooms</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📐</span>
+            <span class="detail-text">{{ property.area }} sq ft</span>
+          </div>
+        </div>
+        
+        <button class="details-link" (click)="viewPropertyDetails(property)">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
